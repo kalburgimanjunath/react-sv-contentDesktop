@@ -2,23 +2,23 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { data } from '../../data/data.js';
 
-const initialState = { contents: data };
+const initialState = { content: data };
 
 const contentSlice = createSlice({
   name: 'content',
   initialState,
   reducers: {
-    increment(state) {
-      state.value++;
-    },
-    decrement(state) {
-      state.value--;
-    },
-    incrementByAmount(state, action) {
-      state.value += action.payload;
+    addTodo: {
+      reducer: (state, action) => {
+        state.push(action.payload);
+      },
+      // prepare: (text) => {
+      //   const id = nanoid();
+      //   return { payload: { id, text } };
+      // },
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = contentSlice.actions;
+export const { addTodo } = contentSlice.actions;
 export default contentSlice.reducer;

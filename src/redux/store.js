@@ -1,10 +1,10 @@
 import { createSlice, createAction } from '@reduxjs/toolkit';
-import { createStore, combineReducers, rootReducer } from 'redux';
-import contentReducer from './reducers/contentSlice';
-// const reducer = combineReducers({
-//   content: content.reducer,
-// });
-const reducer = combineReducers({
-  content: contentReducer,
+import { combineReducers, rootReducer } from 'redux';
+import { cententReducer } from './reducers/contentSlice';
+
+import { configureStore } from '@reduxjs/toolkit';
+export const store = configureStore({
+  reducer: {
+    content: cententReducer,
+  },
 });
-export const store = createStore(reducer);

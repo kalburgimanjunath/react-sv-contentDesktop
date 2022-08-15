@@ -6,7 +6,7 @@ import { Login, Signup, Dashboard, Home } from './pages/index';
 import { getStorage } from './firebase';
 
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { store } from './redux/store';
 export default function App() {
   // getStorage();
   return (
