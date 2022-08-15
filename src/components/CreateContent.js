@@ -1,7 +1,10 @@
 import React from 'react';
-/* login features
-firebase authentication and signup and login
-*/
+import ContentList from './ContentList';
 export default function CreateContent() {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Create Content</h1>
+      <ContentList />
+    </div>
+  );
 }
