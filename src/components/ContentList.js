@@ -10,8 +10,14 @@ export default function ContentList() {
           data.map((item) => {
             return (
               <div key={item.id}>
-                {item.title}
-                {item.id}
+                <div>
+                  Content:
+                  {item.title}
+                  {item.id}
+                  <button type="button">Play</button>
+                </div>
+                <div>Language:{item.language}</div>
+                <div>Created On:{item.created_at}</div>
               </div>
             );
           })}
